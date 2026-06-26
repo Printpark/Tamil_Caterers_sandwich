@@ -9,86 +9,129 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Segoe UI',Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
 
-    background:#efeae2;
-    background-image:
-    radial-gradient(circle at 25px 25px, rgba(255,255,255,.35) 2px, transparent 2px),
-    radial-gradient(circle at 75px 75px, rgba(255,255,255,.35) 2px, transparent 2px);
-    background-size:100px 100px;
+font-family:Segoe UI,Arial,sans-serif;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+background:#efeae2;
+
+background-image:
+radial-gradient(circle at 20px 20px,#ffffff55 2px,transparent 2px),
+radial-gradient(circle at 70px 70px,#ffffff55 2px,transparent 2px);
+
+background-size:90px 90px;
+
 }
 
-.food-card{
-    width:92%;
-    max-width:380px;
-    background:#fff;
-    border-radius:18px;
-    padding:25px;
-    border:1px solid #e5e5e5;
-    box-shadow:0 8px 20px rgba(0,0,0,.10);
+.card{
+
+width:340px;
+
+background:white;
+
+border-radius:16px;
+
+padding:28px;
+
+box-shadow:0 8px 22px rgba(0,0,0,.12);
+
+border:1px solid #ececec;
+
 }
 
-.company{
-    text-align:center;
-    font-size:30px;
-    font-weight:700;
-    color:#222;
-    letter-spacing:1px;
-    margin-bottom:15px;
+h1{
+
+text-align:center;
+
+font-size:28px;
+
+letter-spacing:1px;
+
+margin-bottom:18px;
+
+color:#222;
+
 }
 
-.veg{
-    width:max-content;
-    margin:0 auto 18px;
-    background:#2e7d32;
-    color:#fff;
-    padding:6px 18px;
-    border-radius:25px;
-    font-size:14px;
-    font-weight:600;
+.product{
+
+text-align:center;
+
+font-size:18px;
+
+font-weight:600;
+
+color:#2e7d32;
+
+margin-bottom:22px;
+
 }
 
-.item{
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-    color:#2e7d32;
-    margin-bottom:18px;
+.info{
+
+font-size:17px;
+
+color:#333;
+
+line-height:2.1;
+
 }
 
-.details{
-    color:#444;
-    font-size:17px;
-    line-height:1.4;
+.row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+border-bottom:1px solid #f1f1f1;
+
+padding:8px 0;
+
 }
 
-.details p{
-    margin:5px 0;
+.label{
+
+font-weight:600;
+
 }
 
-.details strong{
-    color:#222;
+.value{
+
+font-weight:500;
+
 }
 
 .price{
-    margin-top:20px;
-    background:#edf8ee;
-    color:#1b5e20;
-    text-align:center;
-    padding:12px;
-    border-radius:10px;
-    font-size:26px;
-    font-weight:bold;
+
+margin-top:20px;
+
+padding:12px;
+
+text-align:center;
+
+background:#edf7ef;
+
+border-radius:10px;
+
+font-size:20px;
+
+font-weight:700;
+
+color:#1b5e20;
+
 }
 
 </style>
@@ -97,43 +140,48 @@ body{
 
 <body>
 
-<div class="food-card">
+<div class="card">
 
-<div class="company">
-TAMIL CATERERS
-</div>
-<p><strong>FSSAI No.</strong></p>
-<p>10026912000209</p>
+<h1>TAMIL CATERERS</h1>
 
-<div class="item">
-🟢 VEG • CORN SANDWICH
+<div class="product">
+🟢 VEG • 🌽 CORN SANDWICH
 </div>
 
-<div class="details">
+<div class="info">
 
-<p><strong>MFG</strong></p>
-<p><span id="mfg-date"></span></p>
+<div class="row">
+<span class="label">FSSAI No.</span>
+<span class="value">10026912000209</span>
+</div>
 
-<p><strong>Validity</strong></p>
-<p>1 DAY</p>
+<div class="row">
+<span class="label">MFG</span>
+<span id="mfg-date"></span>
+</div>
+
+<div class="row">
+<span class="label">Validity</span>
+<span>1 Day</span>
+</div>
 
 </div>
 
 <div class="price">
-Rs.  60
+₹60
 </div>
 
 </div>
 
 <script>
 
-const today = new Date();
+const today=new Date();
 
-const day = String(today.getDate()).padStart(2,'0');
-const month = String(today.getMonth()+1).padStart(2,'0');
-const year = today.getFullYear();
+const day=String(today.getDate()).padStart(2,'0');
+const month=String(today.getMonth()+1).padStart(2,'0');
+const year=today.getFullYear();
 
-document.getElementById("mfg-date").textContent =
+document.getElementById("mfg-date").textContent=
 `${day}-${month}-${year}`;
 
 </script>
