@@ -4,118 +4,166 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tamil Caterers Label</title>
+<title>Tamil Caterers</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Segoe UI',Arial,sans-serif;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+font-family:'Segoe UI',Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
 
-    /* Soft WhatsApp-like background */
-    background-color:#efeae2;
-    background-image:
-        radial-gradient(circle at 25px 25px, rgba(255,255,255,.35) 2px, transparent 2px),
-        radial-gradient(circle at 75px 75px, rgba(255,255,255,.35) 2px, transparent 2px);
-    background-size:100px 100px;
+background-color:#efeae2;
+background-image:
+radial-gradient(circle at 25px 25px, rgba(255,255,255,.35) 2px, transparent 2px),
+radial-gradient(circle at 75px 75px, rgba(255,255,255,.35) 2px, transparent 2px);
+background-size:100px 100px;
 }
 
 .food-card{
-    width:92%;
-    max-width:380px;
-    background:#fff;
-    border-radius:18px;
-    padding:24px;
-    box-shadow:0 8px 22px rgba(0,0,0,.12);
+width:92%;
+max-width:380px;
+background:#ffffff;
+border:1px solid #d9d9d9;
+border-radius:16px;
+padding:25px;
+box-shadow:0 8px 18px rgba(0,0,0,.10);
 }
 
 .company{
-    text-align:center;
-    font-size:26px;
-    font-weight:bold;
-    color:#333;
-    letter-spacing:1px;
-    margin-bottom:18px;
-}
-
-.item{
-    font-size:22px;
-    font-weight:700;
-    color:#2e7d32;
-    text-align:center;
-    margin-bottom:18px;
-}
-
-.details{
-    font-size:16px;
-    color:#555;
-    line-height:2;
-}
-
-.details strong{
-    color:#222;
-}
-
-.divider{
-    height:1px;
-    background:#e5e5e5;
-    margin:18px 0;
-}
-
-.validity{
-    text-align:center;
-    margin-top:15px;
-    color:#c62828;
-    font-weight:600;
+text-align:center;
+font-size:30px;
+font-weight:700;
+letter-spacing:1px;
+color:#222;
+margin-bottom:12px;
 }
 
 .veg{
-    display:inline-block;
-    background:#2e7d32;
-    color:white;
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:14px;
-    margin-bottom:18px;
+width:max-content;
+margin:auto;
+background:#2e7d32;
+color:#fff;
+padding:6px 16px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
 }
+
+.item{
+text-align:center;
+font-size:24px;
+font-weight:bold;
+color:#2e7d32;
+letter-spacing:.5px;
+margin-bottom:15px;
+}
+
+.divider{
+height:1px;
+background:#e2e2e2;
+margin:18px 0;
+}
+
+.details{
+font-size:16px;
+line-height:2;
+color:#444;
+}
+
+.details strong{
+color:#222;
+}
+
+.price{
+margin-top:15px;
+text-align:center;
+background:#edf8ee;
+color:#1b5e20;
+padding:10px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+}
+
+.footer{
+margin-top:18px;
+text-align:center;
+font-size:13px;
+color:#888;
+letter-spacing:.5px;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="food-card">
 
-    <div class="veg">🟢 VEG</div>
+<div class="company">
+TAMIL CATERERS
+</div>
 
-    <div class="company">TAMIL CATERERS</div>
+<div class="veg">
+🟢 PURE VEG
+</div>
 
-    <div class="item">🌽 CORN SANDWICH</div>
+<div class="item">
+🌽 CORN SANDWICH
+</div>
 
-    <div class="divider"></div>
+<div class="divider"></div>
 
-    <div class="details">
-        <strong>FSSAI No:</strong> 10026912000209<br>
+<div class="details">
 
-        <strong>Price:</strong> Rs. 50<br>
+<strong>FSSAI No.</strong><br>
+10026912000209
 
-        <strong>MFD:</strong> 25-Jun-2026<br>
+<br><br>
 
-        <strong>Validity:</strong> 1 Day
-    </div>
+<strong>MFG</strong><br>
+<span id="mfg-date"></span>
 
-    <div class="validity">
-        VALID FOR 1 DAY
-    </div>
+<br><br>
+
+<strong>Validity</strong><br>
+1 DAY
 
 </div>
+
+<div class="price">
+Rs. 50
+</div>
+
+<div class="footer">
+Freshly Prepared • Best Before 1 Day
+</div>
+
+</div>
+
+<script>
+
+const today = new Date();
+
+const day = String(today.getDate()).padStart(2,'0');
+const month = String(today.getMonth()+1).padStart(2,'0');
+const year = today.getFullYear();
+
+document.getElementById("mfg-date").textContent =
+`${day}-${month}-${year}`;
+
+</script>
 
 </body>
 </html>
