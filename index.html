@@ -9,98 +9,86 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:'Segoe UI',Arial,sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+    font-family:'Segoe UI',Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 
-background-color:#efeae2;
-background-image:
-radial-gradient(circle at 25px 25px, rgba(255,255,255,.35) 2px, transparent 2px),
-radial-gradient(circle at 75px 75px, rgba(255,255,255,.35) 2px, transparent 2px);
-background-size:100px 100px;
+    background:#efeae2;
+    background-image:
+    radial-gradient(circle at 25px 25px, rgba(255,255,255,.35) 2px, transparent 2px),
+    radial-gradient(circle at 75px 75px, rgba(255,255,255,.35) 2px, transparent 2px);
+    background-size:100px 100px;
 }
 
 .food-card{
-width:92%;
-max-width:380px;
-background:#ffffff;
-border:1px solid #d9d9d9;
-border-radius:16px;
-padding:25px;
-box-shadow:0 8px 18px rgba(0,0,0,.10);
+    width:92%;
+    max-width:380px;
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    border:1px solid #e5e5e5;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
 }
 
 .company{
-text-align:center;
-font-size:30px;
-font-weight:700;
-letter-spacing:1px;
-color:#222;
-margin-bottom:12px;
+    text-align:center;
+    font-size:30px;
+    font-weight:700;
+    color:#222;
+    letter-spacing:1px;
+    margin-bottom:15px;
 }
 
 .veg{
-width:max-content;
-margin:auto;
-background:#2e7d32;
-color:#fff;
-padding:6px 16px;
-border-radius:30px;
-font-size:14px;
-font-weight:600;
-margin-bottom:20px;
+    width:max-content;
+    margin:0 auto 18px;
+    background:#2e7d32;
+    color:#fff;
+    padding:6px 18px;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:600;
 }
 
 .item{
-text-align:center;
-font-size:24px;
-font-weight:bold;
-color:#2e7d32;
-letter-spacing:.5px;
-margin-bottom:15px;
-}
-
-.divider{
-height:1px;
-background:#e2e2e2;
-margin:18px 0;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    color:#2e7d32;
+    margin-bottom:18px;
 }
 
 .details{
-font-size:16px;
-line-height:2;
-color:#444;
+    color:#444;
+    font-size:17px;
+    line-height:1.4;
+}
+
+.details p{
+    margin:5px 0;
 }
 
 .details strong{
-color:#222;
+    color:#222;
 }
 
 .price{
-margin-top:15px;
-text-align:center;
-background:#edf8ee;
-color:#1b5e20;
-padding:10px;
-border-radius:10px;
-font-size:22px;
-font-weight:bold;
-}
-
-.footer{
-margin-top:18px;
-text-align:center;
-font-size:13px;
-color:#888;
-letter-spacing:.5px;
+    margin-top:20px;
+    background:#edf8ee;
+    color:#1b5e20;
+    text-align:center;
+    padding:12px;
+    border-radius:10px;
+    font-size:26px;
+    font-weight:bold;
 }
 
 </style>
@@ -114,40 +102,29 @@ letter-spacing:.5px;
 <div class="company">
 TAMIL CATERERS
 </div>
+<p><strong>FSSAI No.</strong></p>
+<p>10026912000209</p>
 
 <div class="veg">
-🟢 PURE VEG
+🟢 VEG
 </div>
 
 <div class="item">
 🌽 CORN SANDWICH
 </div>
 
-<div class="divider"></div>
-
 <div class="details">
 
-<strong>FSSAI No.</strong><br>
-10026912000209
+<p><strong>MFG</strong></p>
+<p><span id="mfg-date"></span></p>
 
-<br><br>
-
-<strong>MFG</strong><br>
-<span id="mfg-date"></span>
-
-<br><br>
-
-<strong>Validity</strong><br>
-1 DAY
+<p><strong>Validity</strong></p>
+<p>1 DAY</p>
 
 </div>
 
 <div class="price">
-Rs. 50
-</div>
-
-<div class="footer">
-Freshly Prepared • Best Before 1 Day
+Rs.  60
 </div>
 
 </div>
